@@ -2,8 +2,8 @@
 var os = require('os');
 //var http = require('http');
 //var colors = require('colors');
-var showDate = require('../modules/gettime');
-var gettime = require('../modules/gettime');
+var showDate = require('../modules/getTime');
+var getTime = require('../modules/getTime');
 var osinfo = require('../modules/osinfo');
 
 process.stdin.setEncoding('utf-8'); 
@@ -29,11 +29,8 @@ process.stdin.on('readable', function() {
 			case '/getOSinfo':
     			osinfo.print();
 				break;
-			case 'time':
+			case 'date':
 				showDate.print();
-				break;
-			case 'second':
-				gettime.print();
 				break;
 			default:
 				process.stderr.write('Whaaat? o_O\n');
